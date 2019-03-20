@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>JS Bin</title>
+</head>
+	<div id="divTyping"></div>
+	<script>
+		var str = "感情没淡，我也没不耐烦，我也没不喜欢你，我最爱你了（刷新后再次播放）"
+		var i = 0;
+		function typing(){
+			var divTyping = document.getElementById('divTyping')
+			if(i<=str.length){
+				divTyping.innerHTML = str.slice(0,i++) + "……";
+				setTimeout("typing()",200)
+			}else{
+				divTyping.innerHTML = str;
+			}
+		}
+		typing();
+
+	</script>
+	
+</body>
+</html>
